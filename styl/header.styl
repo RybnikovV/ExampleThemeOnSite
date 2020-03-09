@@ -1,0 +1,124 @@
+dark = #252525
+light = #FFCC00
+
+:root {
+    --main-bg-color: #ffffff;
+    --invers-bg-color: #252525;
+    --accent-bg-color: #FFCC00;
+
+    --main-text-color: #252525;
+    --invers-text-color: #ffffff;
+}
+
+html
+    font-family Roboto
+    font-size 10px
+
+body
+    background-color var(--main-bg-color);
+    color var(--main-text-color)
+    transition-property: background-color
+    transition-duration: .2s
+
+a,li
+    color var(--main-text-color)
+a:hover
+    text-decoration: underline
+
+
+.header
+    &__top
+        display flex
+        margin-bottom: 20px
+    &__bottom
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-radius: 8px
+        background-color: light
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25)
+        &-search
+            padding: 0 1.2rem
+            font-size: 1.9rem
+        &-promo
+            display block
+            padding: 0 1.2rem
+            font-size: 1.4rem
+            text-transform: uppercase
+            font-weight: 700
+            text-decoration: none
+    &__logo
+        margin-top: .6rem
+    &__logo-img
+        width 100%
+        height auto
+    &__content-top
+        display flex
+        margin-bottom: 1.6rem
+        justify-content space-between
+        border-bottom 1px solid #D7D7D7 
+    &__content-bottom
+        display flex
+        justify-content: flex-end
+
+    &__product-amount
+        display: flex
+        flex-direction: column
+        margin-right: 3.2rem
+        font-size: 1.4rem
+    &__product-item
+        margin-bottom .4rem
+        text-decoration: none
+    &__product-icon
+        margin-right .4rem
+    &__product-contacts
+        font-size: 1.4rem
+
+    &__contacts-item
+        display: flex
+        justify-content: space-between
+        font-size: 1.4rem
+        margin-bottom: .4rem
+    &__contacts-num
+        font-size: 2.5rem
+        font-weight: 700
+        padding-bottom: .4rem
+        border-bottom: 1px solid #D7D7D7 
+
+    &__menu
+        display flex
+        padding 0
+        margin 0
+        list-style none
+    &__menu-link
+        display inline-block
+        padding .6rem 1rem
+        font-size 1.2rem
+        font-weight: 400
+        text-decoration none
+        &:hover
+            text-decoration underline
+        &_border
+            position: relative
+            &:after
+                content: ""
+                position: absolute
+                right -1px
+                top calc(50% - .6rem)
+                display: block
+                height 50%
+                border-right: 1px solid var(--invers-bg-color)
+    &__menu_theme-dark
+        background-color: dark
+        & .header__menu-link
+            background-color: dark
+            font-size: 1.4rem
+            color var(--invers-text-color)
+            font-weight: 700
+            &:hover
+                background-color: var(--accent-bg-color)
+                text-decoration: none
+                color: var(--main-text-color)
+        
+        
+    
